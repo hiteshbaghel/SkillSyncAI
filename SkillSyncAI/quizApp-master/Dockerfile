@@ -14,10 +14,9 @@ COPY --from=build /app/target/quizApp-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port your app runs on (e.g., 8080)
 EXPOSE 8080
-ENV gemini_api_key=AIzaSyB8PLx-3dgX2q8BfRCi5leblqmBjCFa0HI
-ENV spring.datasource.url=jdbc:mysql://bytewise24.cli6o6w62u7f.ap-south-1.rds.amazonaws.com/bytewise_db?useSSL=true&allowPublicKeyRetrieval=true&connectTimeout=30000&socketTimeout=30000
-ENV spring.datasource.username=admin24
-ENV spring.datasource.password=bytewise24
+ENV gemini_api_key=
+ENV spring.datasource.url=ENV spring.datasource.username=
+ENV spring.datasource.password=
 
 # Command to run the JAR file
 ENTRYPOINT ["java", "-jar", "app.jar"]
